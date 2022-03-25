@@ -4,3 +4,23 @@ display: flex;
   text-align: center;
 }
 
+
+.Wrapper {
+  background-color: lightblue;
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Container {
+  background-color: lightgreen;
+}
+
+.First-page {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}

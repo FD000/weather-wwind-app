@@ -68,3 +68,63 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+## Lista på saker den ska innehålla
+- Lägga upp bilder
+- Skriva text på bilden(under)
+- Väderinfo
+- VInd
+- Högtryck
+- Lågtryck
+- Soluppgång
+- SOlnedgång
+- Temperatur (känns som)
+Du ska kunna lägga upp 2 bilder, en på fisket och en på draget, datum, beskrivning 
+
+
+
+
+
+import React, { useState, useEffect } from 'react'
+
+
+const WeatherWrapper = () => {
+    const [api, setApi] = useState([])
+
+
+    useEffect(() => {
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=Bro,Sweden&units=metric&APPID=b75d2c8e0b553d63367f547b94b6b40c")
+            .then(res => res.json())
+            .then(data => setApi(data))
+    }, [])
+
+    console.log(api)
+    console.log(api.wind)
+
+
+    return (
+        <>
+            <div>
+                Test
+            </div>
+        </>
+    )
+}
+
+export default WeatherWrapper
+
+
+     /* {
+    api && api.wind &&
+    <div>
+        {api.wind.speed}
+        {api.wind.speed}
+        {api.wind.speed}
+        {api.wind.speed}
+        {api.wind.speed}
+        {api.wind.speed}
+    </div>
+} */

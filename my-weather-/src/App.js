@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css';
-import WeatherWrapper from './components/Weather-Wrapper'
+import Wrapper from './pages/Wrapper'
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-        <WeatherWrapper />
+        <Wrapper />
     </div>
   );
 }
